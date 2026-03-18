@@ -1,0 +1,27 @@
+# Python: Archivos de compilación y caché
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales (Venv)
+.venv/
+venv/
+ENV/
+
+# Neovim: Archivos temporales y de backup
+*.swp
+*.swo
+undo/
+.netrwhist
+
+# VS Code (por si acaso lo abres ahí alguna vez)
+.vscode/
+
+# Archivos de sistema de Linux
+.DS_Store
+*.bak
+*.tmp
+
+# Arch-Dots específicos
+# Si quieres que el usuario use su propio apps.list sin subirlo
+# apps.list

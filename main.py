@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from arch_dots.core import check_python_version
-from arch_dots.scanner import scanner
+from arch_dots.core import check_python_version, check_dependencies
+from arch_dots.manager import run
 
 
 def main():
@@ -9,7 +9,8 @@ def main():
 
     if check_python_version():
         print("Starting configurations scanning...")
-        scanner()
+        check_dependencies()
+        run()
 
         
 

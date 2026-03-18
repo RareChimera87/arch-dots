@@ -37,7 +37,7 @@ def selection(possible, linked):
     incorrect = True
     while incorrect:
 
-        inp = input("Please select number (ex. 1 3 5)")
+        inp = input("\nPlease select number (ex. 1 3 5): ")
         clean = inp.split()
         selected = []
         for i in clean:
@@ -50,6 +50,7 @@ def selection(possible, linked):
                     else:
                         print(f"Number {num} is already linked. Skipping...")
                         incorrect = False
+                        
                 else:
                     print(f"Invalid option. Please retry")
                     incorrect = True
@@ -75,19 +76,21 @@ def scanner():
                 
                 print(f"[{i}] {Color.YELLOW}{nombre}{Color.END} (Pending)")
                 
-                print(possible)
+                #print(possible)
     
     selected = selection(possible, linked)
-    
-    print("Selectioned: ")
-    for i in selected:
-        print(f"- {Color.GREEN}{selected[i]}{Color.END}")
-    
-    ans = input("Confirm [Y/n]")
-    if ans == "Y" | ans == "Yes" | ans == "y" | ans == "yes":
-        print("ok")
-    else:
-        print("Ok exiting...")
-        sys.exit(0)
+    if len(selected) > 0:
+        print("Selectioned: ")
+        for i in selected:
+            #print(f"sssssssssssssssssssssss{i}")
+            print(f"- {Color.GREEN}{i}{Color.END}")
+        
+        ans = input("Confirm [Y/n]: ")
+        if ans == "Y" or ans == "Yes" or ans == "y" or ans == "yes":
+            return selected
+
+
+    print("Ok exiting...")
+    sys.exit(0)
                 
     
