@@ -12,9 +12,10 @@ def check_python_version():
             f"Error: arch-dots requires Python {minimal_version[0]}.{minimal_version[1]} or highuer."
         )
         print(f"Current version: {sys.version_info.major}.{sys.version_info.minor}")
-        sys.exit(1)
+        return False
     else:
         print(f"Python {sys.version_info.major}.{sys.version_info.minor} detected.")
+        return True
 
 
 def check_dependencies():

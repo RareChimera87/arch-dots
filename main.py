@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 
 from arch_dots.core import check_python_version
+from arch_dots.scanner import scanner
 
 
 def main():
-    print("--- Bienvenido a Arch-Dots ---")
+    print("--- Werlcome to Arch-Dots ---")
 
-    # Llamamos a la función que está en core.py
-    check_python_version()
+    if check_python_version():
+        print("Starting configurations scanning...")
+        scanner()
 
-    # Aquí seguiría el resto de tu programa
-    print("Starting configurations scanning...")
+        
 
 
 if __name__ == "__main__":
