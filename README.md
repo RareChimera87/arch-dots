@@ -1,5 +1,8 @@
 # 🛠️ arch-dots
 
+> [!CAUTION]
+> **Warning:** This project is in early development (Alpha). It performs file move operations (`shutil.move`) and creates symbolic links. **Use it with caution** and ensure you have a backup of your configurations before proceeding.
+
 An automated dotfiles manager written in Python, specifically designed for Arch Linux users.
 
 **arch-dots** simplifies the transition to a centralized dotfiles repository. It scans your `~/.config` directory, identifies unsynced applications, and leverages **GNU Stow** to move them into a central repository while automatically creating the necessary symbolic links.
